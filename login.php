@@ -5,7 +5,7 @@
         exit();
     }
     else{
-         require_once "./Database/database.sql";
+         require_once "./Database/project.sql";
          $username = mysqli_real_escape_string($conn,$_POST['username']);
          $password = mysqli_real_escape_string($conn,md5($_POST['password']));
          $sql = "SELECT username,password FROM user WHERE username ='". $username ."' and password = '".$password."'";
